@@ -5,7 +5,12 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    fontFamily: {
+      'display': ['Oswald'],
+      'body': ['"Open Sans"'],
+      'head': ['"Shadows Into Light"']
+    },
   },
+  extend: {},
   plugins: [],
 }
