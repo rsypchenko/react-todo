@@ -1,11 +1,11 @@
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 import { TextField } from "./TextField";
 
 interface Props {
   onSubmit: (todo: string) => void
 }
 
-const Form = ({ onSubmit }: Props) => {
+export const Form = ({ onSubmit }: Props) => {
   const [todo, setTodo] = useState("");
 
   const handleSubmit = (e: React.SyntheticEvent) => {
@@ -34,5 +34,3 @@ const Form = ({ onSubmit }: Props) => {
     </div>
   );
 };
-
-export default Form;

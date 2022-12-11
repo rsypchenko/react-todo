@@ -10,11 +10,11 @@ export const TextField = ({ text, onChange }: Props) => {
 
   return (
     <input
-      className="border-round p-4 w-72 outline-none shadow-xl"
+      className="flex flex-1 border-round p-4 outline-none shadow-xl"
       type="text"
       value={text}
       onChange={handleChange}
-      placeholder="Add task here..."
+      placeholder="Add todo here..."
       required
     ></input>
   );

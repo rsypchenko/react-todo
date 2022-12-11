@@ -1,11 +1,5 @@
 import React from "react";
-
-interface Todo {
-    id: number
-    title: string
-    complete: boolean
-}
-
+import { Todo } from '../../reducer';
 interface ListProps {
     todo: Todo
     handleComplete: (id: number) => void
@@ -22,7 +16,7 @@ export const ListItem = React.memo(({ todo, handleComplete, onRemove }: ListProp
           checked={todo.complete}
           onChange={() => handleComplete(todo.id)}
         />
-        <span className="flex-1 ml-2 align-top">{todo.title}</span>
+        <span className="flex-1 ml-2 align-top text-ellipsis overflow-hidden">{todo.title}</span>
         <button onClick={() => onRemove(todo.id)} className="p-2 border-rounded bg-red-400 text-white uppercase">Delete</button>
       </label>
     </div>

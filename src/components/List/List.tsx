@@ -1,11 +1,5 @@
-import React from "react";
 import { ListItem } from "./ListItem";
-
-interface Todo {
-  id: number
-  title: string
-  complete: boolean
-}
+import { Todo } from '../../reducer';
 
 interface Props {
   todos: Todo[],
